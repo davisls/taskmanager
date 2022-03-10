@@ -1,0 +1,43 @@
+
+/*************************************
+********  Menu de Navegação  ********
+*************************************/
+
+.nav-principal {
+    background-color: rgb(202, 202, 202);
+    padding: 0.6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    margin-left: 10px;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-principal .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+/*************************************
+*************  Tarefas  **************
+*************************************/
+
+.text-completed {
+    color: rgb(201, 201, 201);
+}
+
+.link-tarefa {
+    text-decoration: none;
+    color: black;
+}
+
+.link-tarefa:hover {
+    text-decoration: underline;
+    color: rgb(68, 68, 68);
+}
+
