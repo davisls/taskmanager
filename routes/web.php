@@ -10,12 +10,17 @@ Route::get('/cadastrar', [HomeController::class, 'cadastrar'])->middleware('auth
 Route::post('/store', [TaskController::class, 'store'])->middleware('auth');
 Route::get('/detalhes/{id}', [TaskController::class, 'show'])->middleware('auth');
 Route::get('/tarefas/{id}', [TaskController::class, 'tarefas'])->middleware('auth');
-Route::get('/filter/{filtro}', [TaskController::class, 'filter'])->middleware('auth');
 Route::get('/concluida/{id}', [TaskController::class, 'concluida'])->middleware('auth');
 Route::get('/editar/{id}', [TaskController::class, 'edit'])->middleware('auth');
 Route::put('/update', [TaskController::class, 'update'])->middleware('auth');
 Route::delete('/delete/{id}', [TaskController::class, 'destroy'])->middleware('auth');
 
+Route::get('/filter/{filtro}', [TaskController::class, 'filter'])->middleware('auth');
+Route::get('/prazo/asc', [TaskController::class, 'filterHome'])->middleware('auth');
+Route::get('/prazo/desc', [TaskController::class, 'filterHome'])->middleware('auth');
+Route::get('/prioridade/asc', [TaskController::class, 'filterHome'])->middleware('auth');
+Route::get('/prioridade/desc', [TaskController::class, 'filterHome'])->middleware('auth');
+
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');

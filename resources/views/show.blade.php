@@ -17,13 +17,13 @@
                     <p>Data para Entrega (Máxima): {{date('d-m-Y', strtotime($task->max_date))}}</p>
                     <p>Colaborador Designado: {{$task->name_colaborator_designated}}</p>
 
-                    @if ($task->priority == 'max')
+                    @if ($task->priority == '1')
                     <p>Prioridade: <span class="text-danger">Máxima</span></p>
                     @endif
-                    @if ($task->priority == 'med')
+                    @if ($task->priority == '2')
                     <p>Prioridade: <span class="text-warning">Média</span></p>
                     @endif
-                    @if ($task->priority == 'low')
+                    @if ($task->priority == '3')
                     <p>Prioridade: <span class="text-success">Baixa</span></p>
                     @endif
 

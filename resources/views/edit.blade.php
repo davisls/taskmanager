@@ -54,19 +54,19 @@
                                 <label>Prioridade:</label>
                                 <select name="priority" class="form-control my-2">
                                     <option value="{{$task->priority}}">
-                                        @if ($task->priority == 'max')
+                                        @if ($task->priority == '1')
                                             Máxima
                                         @endif
-                                        @if ($task->priority == 'med')
+                                        @if ($task->priority == '2')
                                             Média
                                         @endif
-                                        @if ($task->priority == 'low')
+                                        @if ($task->priority == '3')
                                             Baixa
                                         @endif
                                     </option>
-                                    <option value="max">Máxima</option>
-                                    <option value="med">Normal</option>
-                                    <option value="low">Baixa</option>
+                                    <option value="1">Máxima</option>
+                                    <option value="2">Normal</option>
+                                    <option value="3">Baixa</option>
                                 </select>
                             </div>
                             <button class="btn form-control btn-primary my-3" type="submit">Editar Tarefa</button>

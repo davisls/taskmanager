@@ -23,10 +23,22 @@
             <table class="table">
                 <thead>
                     <tr>
-                      <th scope="col">Prazo</th>
+                      <th scope="col"><a class="link-tarefa" href="
+                        @if($_SERVER['REQUEST_URI'] == '/prazo/asc')
+                            /prazo/desc
+                        @else
+                            /prazo/asc
+                        @endif
+                        ">Prazo</a></th>
                       <th scope="col">Tarefa</th>
-                      <th scope="col">Designada para</th>
-                      <th scope="col">Prioridade</th>
+                      <th scope="col"><a class="link-tarefa" href="/designada">Designada para</a></th>
+                      <th scope="col"><a class="link-tarefa" href="
+                        @if($_SERVER['REQUEST_URI'] == '/prioridade/asc')
+                            /prioridade/desc
+                        @else
+                            /prioridade/asc
+                        @endif
+                        ">Prioridade</a></th>
                     </tr>
                   </thead>
                 <tbody>
@@ -38,13 +50,13 @@
                                 <td><p class="my-1"><a class="link-tarefa" href="/filter/{{$task->designated_for.'u'}}">{{$task->name_colaborator_designated}}</p></a></td>
                                 <td>
                                     <a class="link-tarefa" href="/filter/{{$task->priority.'p'}}">
-                                    @if ($task->priority == 'max')
+                                    @if ($task->priority == '1')
                                         <p class="text-danger my-1">Máxima</p>
                                     @endif
-                                    @if ($task->priority == 'med')
+                                    @if ($task->priority == '2')
                                         <p class="text-warning my-1">Média</p>
                                     @endif
-                                    @if ($task->priority == 'low')
+                                    @if ($task->priority == '3')
                                         <p class="text-success my-1">Baixa</p>
                                     @endif
                                     </a>

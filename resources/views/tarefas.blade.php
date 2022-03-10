@@ -43,13 +43,13 @@
                                 <td><p class="my-1">{{$task->name}}</p></td>
                                 <td><p class="my-1">{{$task->name_colaborator_designated}}</p></td>
                                 <td>
-                                    @if ($task->priority == 'max')
+                                    @if ($task->priority == '1')
                                         <p class="text-danger my-1">Máxima</p>
                                     @endif
-                                    @if ($task->priority == 'med')
+                                    @if ($task->priority == '2')
                                         <p class="text-warning my-1">Média</p>
                                     @endif
-                                    @if ($task->priority == 'low')
+                                    @if ($task->priority == '3')
                                         <p class="text-success my-1">Baixa</p>
                                     @endif
                                 </td>

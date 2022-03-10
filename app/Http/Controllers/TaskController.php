@@ -137,4 +137,28 @@ class TaskController extends Controller
 
     }
 
+    public function filterHome()
+    {
+        if(str_ends_with($_SERVER['REQUEST_URI'], 'prioridade/desc'))
+        {
+            $tasks = Task::where('completed', 'false')->orderByDesc('priority')->paginate(9);
+            return view('home', ['tasks' => $tasks]);
+        }
+        if(str_ends_with($_SERVER['REQUEST_URI'], 'prioridade/asc'))
+        {
+            $tasks = Task::where('completed', 'false')->orderBy('priority')->paginate(9);
+            return view('home', ['tasks' => $tasks]);
+        }
+        if(str_ends_with($_SERVER['REQUEST_URI'], 'prazo/asc'))
+        {
+            $tasks = Task::where('completed', 'false')->orderBy('max_date')->paginate(9);
+            return view('home', ['tasks' => $tasks]);
+        }
+        if(str_ends_with($_SERVER['REQUEST_URI'], 'prazo/desc'))
+        {
+            $tasks = Task::where('completed', 'false')->orderByDesc('max_date')->paginate(9);
+            return view('home', ['tasks' => $tasks]);
+        }
+    }
+
 }

@@ -52,9 +52,9 @@
                                 <label>Prioridade:</label>
                                 <select name="priority" class="form-control my-2">
                                     <option value="" selected disabled hidden></option>
-                                    <option value="max">Máxima</option>
-                                    <option value="med">Normal</option>
-                                    <option value="low">Baixa</option>
+                                    <option value="1">Máxima</option>
+                                    <option value="2">Normal</option>
+                                    <option value="3">Baixa</option>
                                 </select>
                             </div>
                             <button class="btn form-control btn-primary my-3" type="submit">Cadastrar Tarefa</button>
