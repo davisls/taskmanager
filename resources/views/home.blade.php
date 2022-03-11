@@ -31,7 +31,7 @@
                         @endif
                         ">Prazo</a></th>
                       <th scope="col">Tarefa</th>
-                      <th scope="col"><a class="link-tarefa" href="/designada">Designada para</a></th>
+                      <th scope="col">Designada para</th>
                       <th scope="col"><a class="link-tarefa" href="
                         @if($_SERVER['REQUEST_URI'] == '/prioridade/asc')
                             /prioridade/desc
